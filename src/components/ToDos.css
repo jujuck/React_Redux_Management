@@ -1,0 +1,30 @@
+table {
+  width: 100%;
+  margin: 2rem;
+  border: 1px solid black;
+  border-spacing: 0;
+}
+
+thead {
+  height: 4rem;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  border-color: var(--main-color);
+}
+
+tbody tr {
+  height: 2rem;
+}
+
+td {
+  padding-left: 1rem;
+}
+
+.light {
+  background-color: var(--secondary-color);
+}
+
+.grey {
+  background-color: gray;
+}

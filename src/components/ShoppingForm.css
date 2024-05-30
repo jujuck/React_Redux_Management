@@ -1,0 +1,16 @@
+form {
+  display: flex;
+  justify-content: space-around;
+
+  input,
+  select,
+  button {
+    margin-left: 0.5rem;
+    border-radius: 0.5rem;
+    padding-left: 0.5rem;
+  }
+
+  button {
+    width: 10%;
+  }
+}
