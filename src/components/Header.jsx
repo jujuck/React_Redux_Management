@@ -1,10 +1,7 @@
-import { useSelector } from "react-redux";
 import "./Header.css";
 
 function Header() {
-  const actualNbOFItem = useSelector(
-    (state) => state.shops.filter((item) => item.status === "to buy").length
-  );
+  const actualNbOFItem = "???";
   return (
     <header>
       <h5>Nombre de produits à acheter : {actualNbOFItem}</h5>

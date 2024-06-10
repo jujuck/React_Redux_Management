@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addProduct } from "../redux/actions";
 import "./ShoppingForm.css";
 
 const initialValue = {
@@ -12,7 +10,6 @@ const initialValue = {
 };
 
 function ShoppingForm() {
-  const dispatch = useDispatch();
   const [shop, setShop] = useState(initialValue);
 
   const handleShop = (event) => {
@@ -21,7 +18,6 @@ function ShoppingForm() {
 
   const onSub = (e) => {
     e.preventDefault();
-    dispatch(addProduct(shop));
     setShop(initialValue);
   };
 
