@@ -1,17 +1,19 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { quantity } from "../redux/actions";
+import { addProduct } from "../redux/actions";
 import "./ShoppingForm.css";
+
+const initialValue = {
+  product: "",
+  brand: "",
+  quantity: 0,
+  store: "",
+  status: "to buy",
+};
 
 function ShoppingForm() {
   const dispatch = useDispatch();
-  const [shop, setShop] = useState({
-    product: "",
-    brand: "",
-    quantity: 0,
-    store: "",
-    status: "to buy",
-  });
+  const [shop, setShop] = useState(initialValue);
 
   const handleShop = (event) => {
     setShop((prev) => ({ ...prev, [event.target.name]: event.target.value }));
@@ -19,7 +21,8 @@ function ShoppingForm() {
 
   const onSub = (e) => {
     e.preventDefault();
-    dispatch(quantity(shop));
+    dispatch(addProduct(shop));
+    setShop(initialValue);
   };
 
   return (
