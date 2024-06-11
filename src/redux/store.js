@@ -1,4 +1,5 @@
 // file: store.ts
+// file: store.ts
 import { configureStore } from "@reduxjs/toolkit";
 import { reducer } from "./reducer";
 
